@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Форсаж - фильм</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="./main.css">
+	</head>
+	<body>
+		<article class="page-container">
+			<header class="page-header"><div class="wrap"><img src="logo.jpeg"><h1>Фильм Форсаж</h1><button id="menu"></button></div></header>
+			<div class="page-content"><div class="wrap">
+				<h1>Автор</h1>
+				<h2>Осетров Арсений</h2>
+				<div><img src="arseniy.jpg"></div>
+				<form id="aboutForm" action="">
+					<fieldset>
+						<p>Написать мне:</p>
+						<label>Ваше имя: <input type="text" name="name"></label>
+						<label>Ваш email: <input type="email" name="email"></label>
+						<label>Заголовок: <input type="text" name="title"></label>
+						<label>Ваше сообщение: <textarea name="message"></textarea></label>
+						<button class="btn-submit" type="submit">Отправить</button>
+					</fieldset> 
+				</form>
+			</div></div>
+			<footer class="page-footer">
+				<div class="wrap">&copy; Copyright Osetrov Arseniy, 2023</div>
+			</footer>
+		</article>
+		<nav class="menu">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="forsage.html">О Форсаже</a></li>
+			<li><a href="forsage-1.html">Форсаж 1</a></li>
+			<li><a href="about.html">Автор</a></li>
+		</nav>
+		<script type="text/javascript">
+			const menu = document.getElementById('menu');
+			menu.addEventListener('click', function(e) {
+				if (document.body.className == 'menu-open') {
+					document.body.className = '';
+				} else {
+					document.body.className = 'menu-open';
+				}
+			});
+			
+			const form = document.getElementById('aboutForm');
+			form.addEventListener('submit', function(e) {
+				alert('Данные записаны');
+				e.preventDefault();
+			});
+		</script>
+	</body>
+</html>
